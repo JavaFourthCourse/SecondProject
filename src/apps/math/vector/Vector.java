@@ -14,28 +14,17 @@ public class Vector implements Cloneable
 	
 	/**
 	 * Создание массива из векторов
-	 * @param count Количество векторов
-	 * @param dimension Размерность векторов
+	 *
 	 * @param values Массив значений векторов
 	 * @return Массив векторов
 	 * @throws Exception Несоответствие count и dimension с содержимым vectors
 	 */
-	public static Vector[] createArray(int count, int dimension, double[][] values) throws Exception
+	public static Vector[] createArray(double[][] values) throws Exception
 	{
-		if (values.length != count)
-		{
-			throw new Exception("Количество массивов не соответствует параметру count");
-		}
+		Vector[] result = new Vector[values.length];
 		
-		Vector[] result = new Vector[count];
-		
-		for (int i = 0; i < count; i++)
+		for (int i = 0; i < values.length; i++)
 		{
-			if (values[i].length != dimension)
-			{
-				throw new Exception("Размерность вектора не соответствует параметру dimension");
-			}
-			
 			result[i] = new Vector(values[i]);
 		}
 		
@@ -44,7 +33,8 @@ public class Vector implements Cloneable
 	
 	/**
 	 * Статическая версия сложения векторов
-	 * @param first Первый вектор
+	 *
+	 * @param first  Первый вектор
 	 * @param second Второй вектор
 	 * @return Новый вектор, являющийся сложением first и second
 	 * @throws DifferentDimensionException Разная размерность векторов
@@ -68,7 +58,8 @@ public class Vector implements Cloneable
 	
 	/**
 	 * Статическая версия вычитания векторов
-	 * @param first Первый вектор
+	 *
+	 * @param first  Первый вектор
 	 * @param second Второй вектор
 	 * @return Новый вектор, являющийся вычитанием second из first
 	 * @throws DifferentDimensionException Разная размерность векторов
@@ -92,7 +83,8 @@ public class Vector implements Cloneable
 	
 	/**
 	 * Статическая версия умножения вектора на число
-	 * @param vector Вектор, координаты которого будут умножаться на константу
+	 *
+	 * @param vector   Вектор, координаты которого будут умножаться на константу
 	 * @param constant Константа, которая будет умножаться на координаты вектора
 	 * @return Новый вектор, являющийся умножением vector на constant
 	 */
@@ -110,6 +102,7 @@ public class Vector implements Cloneable
 	
 	/**
 	 * Конструктор для задания координат вектора
+	 *
 	 * @param coordinates Координаты вектора
 	 */
 	public Vector(double... coordinates)
@@ -119,6 +112,7 @@ public class Vector implements Cloneable
 	
 	/**
 	 * Копирующий конструктор
+	 *
 	 * @param other Вектор для копирования
 	 */
 	public Vector(Vector other)
@@ -128,6 +122,7 @@ public class Vector implements Cloneable
 	
 	/**
 	 * Конструктор для задания размерности вектора
+	 *
 	 * @param dimension Размерность вектора
 	 */
 	public Vector(int dimension)
@@ -137,6 +132,7 @@ public class Vector implements Cloneable
 	
 	/**
 	 * Вычисление модуля вектора
+	 *
 	 * @return Модуль вектора
 	 */
 	public double calculateModule()
@@ -153,6 +149,7 @@ public class Vector implements Cloneable
 	
 	/**
 	 * Вычисления скалярного произведения векторов
+	 *
 	 * @param other Второй вектор в скалярном произведении
 	 * @return Результат скалярного произведения
 	 * @throws DifferentDimensionException Разная размерность векторов
@@ -176,6 +173,7 @@ public class Vector implements Cloneable
 	
 	/**
 	 * Сложение вектора с текущим вектором
+	 *
 	 * @param other Второй вектор в сложении
 	 * @return Ссылку на себя после сложения
 	 * @throws DifferentDimensionException Разная размерность векторов
@@ -197,6 +195,7 @@ public class Vector implements Cloneable
 	
 	/**
 	 * Вычитание из текущего вектора другого
+	 *
 	 * @param other Вычитаемый вектор
 	 * @return Ссылку на себя после вычитания
 	 * @throws DifferentDimensionException Разная размерность векторов
@@ -218,6 +217,7 @@ public class Vector implements Cloneable
 	
 	/**
 	 * Умножение текущего вектора на константу
+	 *
 	 * @param constant Константа для умножения на вектор
 	 * @return Ссылку на себя после умножения на константу
 	 */
@@ -233,6 +233,7 @@ public class Vector implements Cloneable
 	
 	/**
 	 * Проверка векторов на ортагональность
+	 *
 	 * @param other Второй вектор
 	 * @return true в случае ортогональности векторов, false иначе
 	 * @throws DifferentDimensionException Разная размерность векторов
@@ -244,6 +245,7 @@ public class Vector implements Cloneable
 	
 	/**
 	 * Проверка векторов на коллинеарность
+	 *
 	 * @param other Второй вектор
 	 * @return true в случае коллинеарности векторов, false иначе
 	 * @throws DifferentDimensionException Разная размерность векторов
@@ -305,6 +307,7 @@ public class Vector implements Cloneable
 	
 	/**
 	 * Setter для coordinates
+	 *
 	 * @param coordinates Новые координаты вектора
 	 */
 	public void setCoordinates(double[] coordinates)
@@ -314,6 +317,7 @@ public class Vector implements Cloneable
 	
 	/**
 	 * Getter для coordinates
+	 *
 	 * @return coordinates
 	 */
 	public double[] getCoordinates()
@@ -323,6 +327,7 @@ public class Vector implements Cloneable
 	
 	/**
 	 * Клонирование вектора
+	 *
 	 * @return Новый вектор идентичный данному
 	 */
 	@Override
@@ -342,6 +347,7 @@ public class Vector implements Cloneable
 	
 	/**
 	 * Представление вектора в виде строки
+	 *
 	 * @return Вектор в формате (a1, a2, ..., an), где a1, a2, ..., an - координаты вектора
 	 */
 	@Override
@@ -368,27 +374,28 @@ public class Vector implements Cloneable
 	
 	/**
 	 * Сравнение векторов
+	 *
 	 * @param vector Вектор для сравнения
 	 * @return true в случае равенства всех координат векторов, false иначе
 	 */
 	@Override
 	public boolean equals(Object vector)
 	{
-		if(getClass() != vector.getClass())
+		if (getClass() != vector.getClass())
 		{
 			return false;
 		}
 		
 		Vector ref = (Vector) vector;
-	
-		if(coordinates.length != ref.coordinates.length)
+		
+		if (coordinates.length != ref.coordinates.length)
 		{
 			return false;
 		}
 		
 		for (int i = 0; i < coordinates.length; i++)
 		{
-			if(coordinates[i] != ref.coordinates[i])
+			if (coordinates[i] != ref.coordinates[i])
 			{
 				return false;
 			}
