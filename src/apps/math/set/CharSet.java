@@ -272,11 +272,17 @@ public class CharSet implements Cloneable
 	 */
 	public void setChars(List<Character> chars)
 	{
-		this.chars = chars;
+		this.chars = new ArrayList<>(chars.size());
+		
+		for (Character character : chars)
+		{
+			this.add(character);
+		}
 	}
 	
 	/**
-	 * Getter для chars
+	 * Getter для chars<br>
+	 * List - ArrayList
 	 *
 	 * @return chars
 	 */
