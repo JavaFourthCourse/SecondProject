@@ -19,8 +19,17 @@ public class Train
 	 */
 	public enum SeatType
 	{
+		/**
+		 * Общие места
+		 */
 		COMMON,
+		/**
+		 * Места купе
+		 */
 		COMPARTMENT,
+		/**
+		 * Места люкс
+		 */
 		LUXURY
 	}
 	
@@ -39,6 +48,7 @@ public class Train
 	 * @param compartmentSeats Количество мест купе в поездах
 	 * @param luxurySeats      Количетсво мест люкс в поездах
 	 * @return Массив поездов
+	 * @throws Exception Разные размеры массивов
 	 */
 	public static Train[] createArray(String[] destinations, String[] numbers, Calendar[] departureTimes, int[] commonSeats, int[] compartmentSeats, int[] luxurySeats) throws Exception
 	{
