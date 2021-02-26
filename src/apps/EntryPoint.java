@@ -1,7 +1,5 @@
 package apps;
 
-import apps.math.set.CharSet;
-
 /**
  * Класс, содержащий точку входа приложения
  */
@@ -14,8 +12,6 @@ public class EntryPoint
 	 */
 	public static void main(String[] args)
 	{
-	
-	
 	
 	}
 }

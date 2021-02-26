@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"apps.math.vector.exceptions","l":"DifferentDimensionException"},{"p":"apps","l":"EntryPoint"},{"p":"apps.math.vector","l":"Vector"}];updateSearchResults();
+typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"apps.math.set","l":"CharSet"},{"p":"apps.math.vector.exceptions","l":"DifferentDimensionException"},{"p":"apps","l":"EntryPoint"},{"p":"apps.math.vector","l":"Vector"}];updateSearchResults();
